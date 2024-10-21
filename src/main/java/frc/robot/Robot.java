@@ -4,6 +4,7 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.PneumaticsModuleType;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.XboxController;
 
@@ -13,8 +14,8 @@ public class Robot extends TimedRobot {
   XboxController controller = new XboxController(0);
 
   //Pneumatics
-  private final Compressor compressor = new Compressor(null);
-  private final DoubleSolenoid solenoid = new DoubleSolenoid(null, 0, 1);
+  private final Compressor compressor = new Compressor(PneumaticsModuleType.CTREPCM);
+  private final DoubleSolenoid solenoid = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 0, 1);
 
   @Override
   public void robotInit() {}
